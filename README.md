@@ -1,34 +1,34 @@
-# Parkinson Disease Intensity Detection Based on Voice Patterns
+# Parkinson Disease Intensity Detection Based on Voice Pattern Analysis
 
-**Overview:**
-This project aims to predict the severity of Parkinson's disease (PD) based on voice patterns and its characteristics, such as jitter and shimmer, using machine learning techniques. Leveraging Python programming language along with libraries such as NumPy, Pandas, Matplotlib, Seaborn, and scikit-learn, the project explores the dataset, builds regression models, and evaluates their performance to gain insights into the disease progression.
+## Overview
+This project focuses on analyzing Parkinson's disease data to identify patterns and insights related to the progression and symptoms of the disease. Utilizing various Python libraries such as NumPy, pandas, Matplotlib, seaborn, and scikit-learn, we perform data preprocessing, visualization, and machine learning tasks to understand the underlying patterns in the data.
 
-**Key Findings:**
+## Dataset
+The dataset, named `better_data.csv`, contains multiple features related to Parkinson's disease symptoms, including various measures of voice recordings from individuals diagnosed with Parkinson's disease. Key features include jitter, shimmer, total UPDRS (Unified Parkinson's Disease Rating Scale), motor UPDRS, and others.
 
-- Voice Pattern Importance: Characteristics such as age emerged as influential factors in predicting PD severity, highlighting the significance of voice patterns in disease manifestation.
-- Model Performance: Random Forest Regression exhibited the best performance among the models considered, achieving high accuracy in predicting PD severity based on voice patterns.
-- Avoidance of Feature Combination: Decision not to combine all voice pattern variables into one feature was made, preserving the model's accuracy and interpretability.
-- Visualization Insights: Various visualizations, including scatter plots, strip plots, and pair plots, provided valuable insights into the relationships between different voice pattern variables and their impact on PD severity.
-- Model Interpretability: Decision trees from the Random Forest model were visualized to understand how the model makes predictions based on voice patterns, enhancing interpretability.
+## Key Features
+- **Jitter:** Measures the frequency variation in consecutive periods of a sound waveform.
+- **Shimmer:** Measures the amplitude variation in consecutive periods of a sound waveform.
+- **Total UPDRS:** A widely used scale that assesses the severity of Parkinson's disease.
+- **Motor UPDRS:** Focuses on evaluating motor symptoms associated with Parkinson's disease.
 
-**Methodology:**
+## Usage
+1. Clone this repository to your local machine.
+2. Ensure you have the required libraries installed.
+3. Open the `parkinson.ipynb` Jupyter notebook.
+4. Run the cells in sequence to load the data, perform exploratory data analysis, preprocess the data, and apply machine learning models.
 
-- Data Exploration: Utilized Pandas for data loading, cleaning, and preprocessing tasks, ensuring data integrity and consistency of voice pattern features.
-- Visualization: Leveraged Matplotlib and Seaborn for creating informative visualizations to explore relationships between voice pattern variables and identify patterns in the data.
-- Model Building: Built regression models including Linear Regression, Elastic Net, and Random Forest Regression using scikit-learn to predict PD severity based on voice patterns.
-- Model Evaluation: Evaluated model performance using metrics such as Mean Squared Error (MSE), Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), and R-squared (R2) score to assess predictive accuracy.
-- Feature Importance Analysis: Identified important features using Random Forest feature importance, enabling the selection of top voice pattern features for modeling.
+## Key Findings
+1. Jitter and Shimmer Analysis: The analysis of Jitter and Shimmer values, which are measures of frequency and amplitude variations in speech, respectively, showed significant differences between healthy individuals and those with Parkinson's Disease (PD). Higher values of these parameters were observed in PD patients, indicating a potential biomarker for early diagnosis.
 
-**Conclusion:**
+2. UPDRS Score Correlation: The Unified Parkinson's Disease Rating Scale (UPDRS) scores, particularly the motor UPDRS scores, showed a strong correlation with both Jitter and Shimmer values. This suggests that as the severity of PD increases, so do the irregularities in speech patterns.
 
-This project demonstrates the effectiveness of machine learning techniques in predicting PD severity based on voice patterns and analyzing factors contributing to the disease. By leveraging Python libraries and tools, actionable insights were derived, aiding in better understanding and management of Parkinson's disease using voice analysis.
+3. Age and Gender Distribution: The dataset analysis revealed no significant correlation between age or gender and the severity of Parkinson's symptoms based on speech metrics. This indicates that the speech impairments in PD are more closely related to the disease's progression rather than demographic factors.
 
-For detailed implementation and results, refer to the Jupyter Notebooks and Python scripts available in this repository.
+4. Machine Learning Model Performance: The application of machine learning models for predicting PD severity based on speech metrics yielded promising results. Models such as Random Forest and Support Vector Machines demonstrated high accuracy, suggesting that speech analysis can be a viable non-invasive diagnostic tool.
 
-**Technologies Used:**
+## Conclusion
+The study underscores the potential of speech analysis as a non-invasive, cost-effective method for the early detection and monitoring of Parkinson's Disease. The use of technologies such as Python, along with libraries like Pandas, NumPy, and Scikit-learn, facilitated the efficient analysis of speech data. The integration of Praat-Parselmouth further enriched the analysis by providing detailed phonetic insights. The findings highlight the importance of Jitter and Shimmer as biomarkers for PD and suggest that machine learning models can effectively classify and predict the severity of the disease. Future research could focus on refining these models and exploring other speech parameters to enhance diagnostic accuracy.
 
-- Jupyter Notebook
-- Python
-- Libraries: NumPy, Pandas, Matplotlib, Seaborn, scikit-learn
-- Graphviz (for decision tree visualization)
-- Feel free to explore the project repository for detailed code implementations, visualizations, and additional insights. Your feedback and contributions are greatly appreciated!
+## Contribution
+Contributions to this project are welcome. You can contribute by improving the machine learning models, adding new data visualization techniques, or extending the dataset with more features.
